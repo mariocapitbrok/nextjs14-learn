@@ -25,7 +25,7 @@ export async function createInvoice(formData: FormData) {
   const amountInCents = amount * 100;
   const date = new Date().toISOString().split('T')[0];
 
-  // IMPORTANT! Do not use spaces before or after template strings.
+  // IMPORTANT! Do not use spaces before or after when using template literals.
   await sql`INSERT INTO invoices (customer_id, amount, status, date)
     VALUES (${customerId}, ${amountInCents}, ${status}, ${date})`;
 
