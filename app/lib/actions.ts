@@ -75,6 +75,7 @@ export async function updateInvoice(
   formData: FormData
 ) {
   const validatedFields = UpdateInvoice.safeParse({
+    id: formData.get('id'),
     customerId: formData.get('customerId'),
     amount: formData.get('amount'),
     status: formData.get('status'),
