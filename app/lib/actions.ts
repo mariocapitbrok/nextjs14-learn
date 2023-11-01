@@ -65,6 +65,7 @@ export async function updateInvoice(formData: FormData) {
 }
 
 export async function deleteInvoice(formData: FormData) {
+  throw new Error('Failed to Delete Invoice.');
   const id = formData.get('id')?.toString();
 
   try {
